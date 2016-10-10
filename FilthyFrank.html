@@ -4,8 +4,30 @@
       <title> The Filthiest of Franks </title>
       <style>
         #thefrankfamily{
-          background-color: #a116dd;
+          background-color: #a116dd/*RGB id to pick the color */;
         }
+        #ksi{
+          width: 60px;
+          height: 60px;
+          background-color: orange;
+          color: blue;
+          border-radius: 300px;
+        }
+          /* Safari doesn't like to show focus
+             School computers don't automatically have chrome. */
+        #ksi:hover{ /*Hover is when your mouse is over the button but not pressing on it */
+          border-radius: 300px;
+          width: 300px;
+          height: 35px;
+          background-image: url(http://static3.techinsider.io/image/55ba6d1f371d22dd2e8ba492-1106-1012/screen%20shot%202015-07-30%20at%202.31.57%20pm.png);
+          /*background image didn't work out so well.  */
+
+        }
+        #ksi:active{ /* active is when you are pressing the button */
+          background-color: green;
+          color: red;
+        }
+
       </style>
   </head>
     <body>
@@ -13,6 +35,7 @@
       <fieldset>
         <legend>Ethan and Hila</legend>
         <h3>Ethan and Hila know Frank</h3>
+        <button id="ksi">ME GUSTA</button>
         <img height="200px" src="https://i.ytimg.com/vi/J1kiP_XB9-Q/maxresdefault.jpg"/>
       </fieldset>
         <table id="thefrankfamily" border="10px" cellpadding="20x"> <!--Kaio-ken times 2!!!!!!-->
@@ -24,7 +47,38 @@
           </tr>
         </table>
         Don't go to this website. Frank hates Weaboos.</br>
-          <iframe height="400px" width="500px" src="http://www.mangapanda.com"></iframe>
+        <!--iframe is when you put a webpage onto your website rather than linking to the webpage. -->
+          <iframe id="manga" height="400px" width="500px" src="http://www.mangapanda.com"></iframe>
           <audio controls src="http://audiosoundclips.com/wp-content/uploads/2014/01/Guitar1.mp3"/></audio>
-    </body>
+          <a href="https://niceme.me" target="manga">Nice Meme</a><!--Changes the webpage inside of the iframe. -->
+          <form>
+            <!--"password" makes words into dots. Like a password
+                "radio" makes radio buttons. It's like answering on a mutltiple choice test. can only click on one radio button-->
+            <input id="radio1" type="radio" name="badvinememe"/><label for="radio1">Eggs</label>
+            <input id="radio2" type="radio" name="badvinememe"/><label for="radio2">Bacon</label>
+            <input id="radio3" type="radio" name="badvinememe"/><label for="radio3">Sassage</label></br>
+            <input id="radio4" type="radio" name="badvinememe2"/><label for="radio4">Lelepons</label>
+            <input id="radio5" type="radio" name="badvinememe2"/><label for="radio5">Spiderman</label>
+            <input id="radio6" type="radio" name="badvinememe2"/><label for="radio6">I don't watch vine. :P</label>
+            <!--Checkbox. It puts a checkbox on your page. duh -->
+          </br>
+          <h4>THE DANKEST OF MEMES</h4>
+            <input id="Pepe" type="checkbox" /><label for="Pepe">Pepe</label></br>
+            <input id="troll" type="checkbox" /><label for="troll">Troll Face</label></br>
+            <input id="2016" type="checkbox" /><label for="2016">2016 Presidents</label></br>
+            <!--Search-shows with X at end to delete it
+                File Input-creates little button and lets you choose file. Shows file nect to the button
+                DATE/TIME/WEEK/Month-has restriction to what you can type
+                Select- brongs down dropbar of options to select from.
+                Text area-like a text box but bigger and can let you resize and can have multiple lines--->
+          <select>
+            <option>Kung Fury</option>
+            <option>It's such a beautiful day</option>
+            <option>Bg Trouble in Little China</option>
+          </select>
+            </br>
+          <textarea rows="10" cols="130"></textarea> <!-- Cols means columns-->
+
+          </form>
+      </body>
 </html>
