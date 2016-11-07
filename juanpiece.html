@@ -13,11 +13,38 @@
           width: 100%;
           height: 100%;
           background-color: purple;
+          background-image: url("http://kofc8157.org/wp-content/uploads/2012/12/spaghetti-meatballs.jpg");
+          background-size: cover; /*Cover makes it look nice and crops it out to fit well */
+          text-align: center; /*Aligning text should go in here because it affects the whole website*/
+
         }
+        #name{
+          font-family: Papyrus;
+          font-size: 100px;
+          text-transform: uppercase;
+          color: red;
+          font-weight: bold;
+
+        }
+        /*Need two things to center stuff. One is block and one is content*/
+
+      .block{
+        width: 100%;
+        height: 100%;
+        display: table;
+        text-align: center;
+      }
+      .content{
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0 auto; /*Auto is used to make automatic margins. Works with text-align(in .block) in order to center text */
+      }
+      /* Need .block and .content in order to center something because you need one to be a table in order to center something*/
       </style>
   </head>
   <body>
-    <div id="cover">
+    <div id="cover" class="block">
+      <span id="name" class="content">Mah Lazer</span>
     </div>
   </body>
 </html>
