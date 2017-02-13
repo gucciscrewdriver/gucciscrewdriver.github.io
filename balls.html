@@ -59,16 +59,20 @@
             if (y + 50 > window.innerHeight) {
                 dy *= -1;
                 y = window.innerHeight - 51;
+                changeColor();
             } else if (y < 0) {
                 dy *= -1;
                 y = 1;
+                changeColor();
             }
             if (x + 50 > window.innerWidth) {
                 dx *= -1;
                 x = window.innerWidth - 51;
+                changeColor();
             } else if (x < 0) {
                 dx *= -1;
                 x = 1;
+                changeColor();
             }
         }, 20);
     </script>
