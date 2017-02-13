@@ -19,7 +19,8 @@
             right: 0;
             left: 0;
             bottom: 0;
-            background-color: #A7C4EB;
+            /* background-color: #A7C4EB; */
+            background-image: url("https://img.ifcdn.com/images/6b27ee7c6172d37ffa25f2f0b73a473f85e49075780e94220373d733f49d3d15_1.jpg");
         }
         #ball {
             height: 50px;
@@ -40,9 +41,9 @@
     <script type = 'text/javascript'>
         // make the ball move
         var x = 0;
-        var dx = 5;
+        var dx = 5; //speed
         var y = 0;
-        var dy = 5;
+        var dy = 5; //speed
         var ball = document.getElementById('ball');
         function changeColor() {
           var r = Math.floor(Math.random() * (255 - 1) + 1);
@@ -50,12 +51,35 @@
           var b = Math.floor(Math.random() * (255 - 1) + 1);
           ball.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
         }
+
+        document.addEventListener('keydown', function (e) {
+            //alert(e.keyCode); How to find keycodes of keys
+            if(e.keyCode == 37) {  //left
+              //alert('left');
+              dx--;
+            } else if(e.keyCode == 39) { //right
+                dx++;
+            } else if (e.keyCode == 38) { //up
+                dy--;
+            } else if(e.keyCode == 40){ //down
+              dy++;
+            } else if(e.keyCode == 32){ //space
+              ball.style.backgroundColor = 'yellow';
+            } else if(e.keyCode == 69){ //e
+              ball.style.height = 200 + 'px';
+              ball.style.width = 200 + 'px';
+            } else if(e.keyCode == 82){ //r
+              ball.style.height = 50 + 'px';
+              ball.style.width = 50 + 'px';
+            }
+        });
+
         changeColor();
         setInterval(function () {
             ball.style.top = y + 'px';
             ball.style.left = x + 'px';
-            x += dx;
-            y += dy;
+            x += dx; //changes position
+            y += dy; //changes position
             if (y + 50 > window.innerHeight) {
                 dy *= -1;
                 y = window.innerHeight - 51;
